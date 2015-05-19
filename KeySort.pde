@@ -1,4 +1,5 @@
 /* keysort
+pixelsorting keyed off secondary image
 rob mac 2015
 thanks to clif pottberg
 
