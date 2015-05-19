@@ -94,7 +94,7 @@ void draw() {
 }
 
 void keyPressed(){
-  if (key == ' ') if (!brokebg) save(fileName+frameCount+".png") else img.save(fileName+frameCount+".png"); 
+  if (key == ' ') if (!brokebg) save(fileName+frameCount+".png"); else img.save(fileName+frameCount+".png"); 
   if (key == '+') {thresh+=.5; println(thresh);}
   if (key == '-') {thresh-=.5; println(thresh);}
   if (key == 'r' || key == 'R') src = loadImage(srcName);
