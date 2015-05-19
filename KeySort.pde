@@ -1,5 +1,4 @@
 /* keysort
-pixelsorting keyed off secondary image
 rob mac 2015
 thanks to clif pottberg
 
@@ -12,8 +11,8 @@ PImage img, src;
 float thresh = 100.0;
 String fileName = "BLADE-RUNNER.jpg";
 String srcName = "mountain1_2625884k.jpg";
-boolean broke = true;
-boolean brokebg = false;
+boolean broke = false;
+boolean brokebg = true;
 
 void setup() {
   img = loadImage(fileName); 
@@ -97,5 +96,6 @@ void keyPressed(){
   if (key == ' ') if (!brokebg) save(fileName+frameCount+".png"); else img.save(fileName+frameCount+".png"); 
   if (key == '+') {thresh+=.5; println(thresh);}
   if (key == '-') {thresh-=.5; println(thresh);}
-  if (key == 'r' || key == 'R') src = loadImage(srcName);
+  if (key == 'r' || key == 'R') {src = loadImage(srcName);   src.resize(img.width, img.height); }
+
 }
