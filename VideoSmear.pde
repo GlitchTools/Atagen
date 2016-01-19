@@ -8,6 +8,7 @@ int fps = 25; //set your video's fps here, and width/height below
 int w = 320;
 int h = 240;
 float len = 0.5; //length of echo
+int mode = 2; //set echo style, 0, 1, or 2
 
 
 Movie frames;
@@ -15,7 +16,6 @@ boolean newFrame = false;
 int cached = 0;
 int count = int(fps*len)-1;
 PImage[] cache = new PImage[count+1];
-int mode = 2;
 void setup() {
   size(w, h);
   frames = new Movie(this, fileName);
